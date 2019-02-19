@@ -453,7 +453,7 @@ button:focus {
 ============================*/
 
 .home-bg {
-    background-image: url(../images/home-bg.jpg);
+    background-image: url(../images/home-bg-fruit.jpg);
     background-position: center center;
     background-size: cover;
     position: relative;
