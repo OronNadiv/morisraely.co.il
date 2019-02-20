@@ -17,9 +17,7 @@ $('#working_form').submit(function () {
         name: $('#name').val(),
         email: $('#email').val(),
         subject: $('#subject').val(),
-        comments: `Submission from morisraely.col.il:
-
-${$('#comments').val()}`
+        comments: $('#comments').val()
       }),
       dataType: 'html',
       contentType: "application/json",
