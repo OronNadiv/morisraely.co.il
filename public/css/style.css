@@ -8,8 +8,9 @@
 *-----------------------------------------------------------------------
 */
 
+
 /***********************
-    1.BASIC           
+    1.BASIC
     2.HELPER
     3.NAVBAR
     4.HOME
@@ -164,6 +165,7 @@ button:focus {
     display: block;
 }
 
+
 /*==========================
         2.HELPER
 ============================*/
@@ -179,7 +181,7 @@ button:focus {
     background-color: #000;
 }
 
-.bg-custom{
+.bg-custom {
     background-color: #000;
 }
 
@@ -342,6 +344,7 @@ button:focus {
     color: #000;
 }
 
+
 /*==========================
         3.NAVBAR
 ============================*/
@@ -448,6 +451,7 @@ button:focus {
     height: 28px;
 }
 
+
 /*==========================
         4.HOME
 ============================*/
@@ -527,6 +531,7 @@ button:focus {
     transition: all .2s;
 }
 
+
 /*----DEMO 4/5/6----*/
 
 .creative:after {
@@ -542,18 +547,21 @@ button:focus {
     background-image: url(../images/bottom-color.png);
 }
 
+
 /*----DEMO 7/8/9-----*/
 
-.clip-home{
+.clip-home {
     clip-path: polygon(0 0, 100% 0, 100% 83%, 50% 100%, 0 83%);
 }
 
+
 /*----DEMO 10/11/12/13----*/
 
-.jarallax{
+.jarallax {
     background-size: cover;
     background-position: center center;
 }
+
 
 /*----DEMO 14----*/
 
@@ -576,6 +584,7 @@ button:focus {
     background-position: center center;
     background-size: cover;
 }
+
 
 /*==========================
         5.ABOUT ME
@@ -617,6 +626,7 @@ button:focus {
     background: #000;
 }
 
+
 /*==========================
         6.SERVICES
 ============================*/
@@ -628,6 +638,7 @@ button:focus {
 .lan_box_ser .ser_icon i {
     font-size: 42px;
 }
+
 
 /*==========================
         7.FUNFACTS
@@ -648,6 +659,7 @@ button:focus {
     background-size: cover;
     background-position: center center;
 }
+
 
 /*===========================
         8.EDUCATION
@@ -715,8 +727,9 @@ button:focus {
     color: #666;
 }
 
+
 /*==========================
-        9.CTA SECTIOn
+        9.CTA SECTION
 ============================*/
 
 .bg-cta {
@@ -726,35 +739,22 @@ button:focus {
     background-position: center center;
 }
 
+
 /*===========================
         10.WORK
 =============================*/
-
-.work_menu li a {
-    letter-spacing: 0.03em;
-    cursor: pointer;
-    margin-bottom: 5px;
-    font-weight: 600;
-    font-size: 14px;
-    color: #9a9a9a !important;
-    transition: all 0.5s;
-    margin-top: 5px;
-}
 
 .work_menu li {
     margin-right: 0px !important;
 }
 
 .work_menu li:after {
-    content: "";
-    height: 3px;
-    width: 3px;
-    border-radius: 50%;
-    background-color: #757575;
-    margin: 0px 16px;
+    content: "*";
+    top: 3px;
     position: relative;
     display: inline-block;
-    top: -3px;
+    color: #bbb;
+    margin: 0px 8px;
 }
 
 .work_menu li:last-child:after {
@@ -762,77 +762,172 @@ button:focus {
     display: none;
 }
 
-.work_menu a.active,
-.work_menu a:hover {
-    color: #000 !important;
+.work_menu li a {
+    letter-spacing: 0.03em;
+    padding: 6px 16px;
+    border-radius: 5px;
+    font-weight: 400;
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    transition: all 0.5s;
+    font-size: 14px;
+    color: #9a9a9a;
 }
 
-.work_item {
-    position: relative;
-    padding: 15px;
+.work_menu li a.active {
+    background-color: #000;
+    color: #ffffff;
 }
 
-.work_box {
+.work_menu li a:hover {
+    background-color: #000;
+    color: #ffffff !important;
+}
+
+.work_img_box {
+    border: none;
+    margin: 15px 0px;
     overflow: hidden;
+    border-radius: 0;
     position: relative;
 }
 
-.work_box .work_img {
+.work_img_box {
     position: relative;
     overflow: hidden;
 }
 
-.work_box .work_img:after {
-    content: " ";
-    display: block;
-    width: 100%;
-    height: 100%;
+.work_img_box a {
     position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 15;
+    height: 100%;
+    top: 0;
+}
+
+.work_img_box .work_images {
+    position: relative;
+}
+
+.work_img_box .work_images img {
+    transition: all 0.5s;
+    width: 100%;
+}
+
+.work_img_box .work_images .work_overlay {
+    top: 10px;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 7px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+}
+
+.work_img_box .work_images .work_overlay a {
+    height: 100%;
+    width: 100%;
+}
+
+.work_img_box .work_images .work_overlay:after {
+    content: '';
+    left: 50%;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 30%;
+    width: 0;
+    position: absolute;
+    bottom: 50%;
+    opacity: 0;
+    height: 50%;
+    height: 0;
+    transition: all 150ms ease-in-out 200ms;
+}
+
+.work_img_box .work_images .work_overlay h4 {
+    overflow: hidden;
+    position: absolute;
+    font-size: 13px;
+    text-align: center;
+    top: 54px;
+    z-index: 2;
+    color: transparent;
+    transition: color 150ms ease-in-out 200ms;
+    right: 25px;
+    padding: 0 10px;
+}
+
+.work_img_box .work_images .work_overlay h6 {
+    color: transparent;
+    overflow: hidden;
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    z-index: 2;
+    font-size: 18px;
+    transition: color 150ms ease-in-out 200ms;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.work_img_box .work_images .work_overlay h4:before {
+    content: '';
+    background: #fff;
+    width: 100%;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    bottom: 0;
+    transition: right 600ms ease-in-out 0s;
+}
+
+.work_img_box .work_images .work_overlay h6::before {
+    content: '';
+    background: #fff;
+    bottom: 0;
+    right: auto;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 100%;
+    transition: left 600ms ease-in-out 0s;
+}
+
+.work_img_box:hover img {
+    transform: scale(1.1);
+}
+
+.work_img_box:hover .work_overlay:after {
     top: 0;
     left: 0;
-    border-radius: 5px;
-    transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
-}
-
-.work_box .work_img>img {
-    transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
-    border-radius: 0;
-}
-
-.work_box .work_detail {
-    opacity: 0;
-    color: #ffffff;
+    bottom: 0;
+    right: 0;
     width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    position: absolute;
-    left: 0;
-    overflow: hidden;
-    transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
-}
-
-.work_box .work_detail h4 {
-    font-size: 18px;
-}
-
-.work_box .work_detail p {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 14px;
-}
-
-.work_box:hover .work_detail {
-    top: 50%;
-    transform: translate(0, -50%);
+    height: 100%;
+    border-radius: 0;
+    transition: all 150ms ease-in-out 200ms;
     opacity: 1;
 }
 
-.work_box:hover .work_img:after {
-    background: rgba(0, 0, 0, 0.8);
+.work_img_box:hover .work_overlay h4 {
+    color: rgba(255, 255, 255, 0.6);
 }
 
-.work_box:hover .work_img>img {
-    transform: scale(1.2);
+.work_img_box:hover .work_overlay h4:before {
+    right: -100%;
 }
+
+.work_img_box:hover .work_overlay h6 {
+    color: white;
+}
+
+.work_img_box:hover .work_overlay h6:before {
+    left: -100%;
+}
+
 
 /*==========================
         11.CLIENT
@@ -876,6 +971,7 @@ button:focus {
     width: 20px;
 }
 
+
 /*==========================
         12.GREATE PEOPLE
 ============================*/
@@ -884,6 +980,7 @@ button:focus {
     max-height: 100px;
     width: auto !important;
 }
+
 
 /*==========================
         13.SUBCRIBE SECTION
@@ -916,6 +1013,7 @@ button:focus {
     max-width: 550px;
 }
 
+
 /*==========================
         14.BLOG
 ============================*/
@@ -943,6 +1041,7 @@ button:focus {
     line-height: 65px;
     background-color: #fff;
 }
+
 
 /*==========================
         15.CONTACT US
@@ -996,6 +1095,7 @@ button:focus {
     font-size: 22px;
 }
 
+
 /*==========================
         16.FOOTER
 ============================*/
@@ -1021,6 +1121,7 @@ button:focus {
 .copy-rights {
     line-height: 43px;
 }
+
 
 /*==========================
         17.BLOG PAGE
@@ -1065,6 +1166,7 @@ button:focus {
     border-color: #000;
     z-index: 3;
 }
+
 
 /*---- SIDEBAR ----*/
 
@@ -1173,6 +1275,7 @@ button:focus {
     color: #000;
 }
 
+
 /*---BLOG SINGLE----*/
 
 .blockquote {
@@ -1239,6 +1342,7 @@ button:focus {
     height: auto;
 }
 
+
 /*==========================
         18.RESPONSIVE
 ============================*/
@@ -1290,14 +1394,18 @@ button:focus {
         font-size: 15px;
         line-height: 1.8;
     }
-    .home-bg,.h-100vh.jarallax,.h-100vh.bg-dark,.home-bg-slider .carousel-item{
+    .home-bg,
+    .h-100vh.jarallax,
+    .h-100vh.bg-dark,
+    .home-bg-slider .carousel-item {
         padding: 110px 0 170px 0;
     }
-    .h-100vh ,.home-bg-slider .carousel-item{
+    .h-100vh,
+    .home-bg-slider .carousel-item {
         height: auto;
     }
-    .clip-home{
-        clip-path:none;
+    .clip-home {
+        clip-path: none;
     }
     .custom-nav .navbar-brand.logo img {
         height: 26px;
@@ -1325,10 +1433,10 @@ button:focus {
     .comment_blog .comment_read:nth-child(odd) {
         margin-left: 34px;
     }
-    .blog_detail h4{
+    .blog_detail h4 {
         font-size: 18px;
     }
-    .blog_detail p.blockquote{
+    .blog_detail p.blockquote {
         font-size: 14px !important;
     }
 }
