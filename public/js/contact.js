@@ -1,6 +1,6 @@
 //Contact
 $('#working_form').submit(function () {
-  const action = $(this).attr('action')
+  var action = $(this).attr('action')
 
   $("#message").slideUp(750, function () {
     $('#message').hide()
@@ -17,7 +17,8 @@ $('#working_form').submit(function () {
         name: $('#name').val(),
         email: $('#email').val(),
         subject: $('#subject').val(),
-        comments: $('#comments').val()
+        comments: $('#comments').val(),
+        "g-recaptcha-response": $('#g-recaptcha-response').val()
       }),
       dataType: 'html',
       contentType: "application/json",
@@ -32,7 +33,5 @@ $('#working_form').submit(function () {
       }
     })
   })
-
   return false
-
 })
