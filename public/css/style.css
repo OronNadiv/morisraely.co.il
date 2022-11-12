@@ -457,7 +457,8 @@ button:focus {
 ============================*/
 
 .home-bg {
-    background-image: url(https://www.edenred.cl/images/default-source/default-album/thinkstockphotos-836685320.jpg);
+
+    background-image: url(../images/AdobeStock_162170834-1440.jpeg);
     background-position: center center;
     background-size: cover;
     position: relative;
