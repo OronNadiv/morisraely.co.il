@@ -667,7 +667,7 @@ button:focus {
 =============================*/
 
 .cv_edu_exp {
-    padding: 10px 0;
+    padding: 10px 34px;
     position: relative;
 }
 
@@ -702,7 +702,7 @@ button:focus {
     height: 20px;
     background-color: #000;
     position: absolute;
-    left: -65px !important;
+    right: -65px !important;
     width: 20px;
     z-index: 1;
 }
