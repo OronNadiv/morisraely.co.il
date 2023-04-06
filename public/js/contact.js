@@ -16,6 +16,7 @@ $('#working_form').submit(function () {
       data: JSON.stringify({
         name: $('#name').val(),
         email: $('#email').val(),
+        phone: $('#phone').val(),
         subject: $('#subject').val(),
         comments: $('#comments').val(),
         "g-recaptcha-response": $('#g-recaptcha-response').val()
